@@ -1,0 +1,137 @@
+body,
+html {
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEiYIResDPuadHAZXkGdxEp6mmBGXi96LZxg&usqp=CAU");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info {
+    width: 85%;
+    height: 100%;
+    background-color: transparent;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.quick {
+    width: 15%;
+    height: 100%;
+    background-color: sandybrown;
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+}
+
+.photo {
+    width: 35%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img {
+    width: 80%;
+    height: 65%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.cursors {
+    list-style-type: none;
+    height: 90%;
+    border: 1px solid transparent;
+    font-size: 40px;
+}
+
+li {
+    cursor: pointer;
+    margin: 65% auto;
+    border-radius: 30%;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+li:hover {
+    background-color: #f29648;
+}
+
+.text {
+    width: 65%;
+    display: block;
+}
+
+.checked {
+    color: orange;
+}
+
+.text>div {
+    text-align: center;
+    margin: 2% auto;
+    color: antiquewhite;
+}
+
+.text>h1 {
+    color: antiquewhite;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.dot {
+    margin-top: 3px;
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border: 2px inset #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.notdot {
+    margin-top: 3px;
+    height: 13px;
+    width: 13px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.bgtext {
+    background-color: rgba(30, 50, 90, 0.2);
+    max-width: 60%;
+}
+
+.contact {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+.elements {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.elements>div {
+    height: 30%;
+    width: 50%;
+}
+
+.elements>div>p {
+    font-size: 25px;
+    font-weight: 700;
+    color: bisque;
+}
