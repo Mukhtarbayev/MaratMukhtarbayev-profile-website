@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/main', function() {
+    return \File::get(public_path() . '/main.php');;
+});
+
+Route::get('/about', function() {
+    return \File::get(public_path() . '/about.php');;
+});
+
+Route::get('/contact', function() {
+    return \File::get(public_path() . '/contact.php');;
+});
