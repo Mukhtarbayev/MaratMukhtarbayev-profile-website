@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +29,16 @@ Route::get('/about', function() {
 
 Route::get('/contact', function() {
     return \File::get(public_path() . '/contact.php');;
+});
+
+Route::get('/post/create',function(){
+    DB::table('post')->insert([
+        'title' => 'lab4',
+        'body' => 'something'
+    ]);
+});
+
+Route::get('/post',function(){
+    $post = Post::find(1);
+    return $post;
 });
