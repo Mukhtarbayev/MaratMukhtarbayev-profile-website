@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,14 +32,10 @@ Route::get('/contact', function() {
     return \File::get(public_path() . '/contact.php');;
 });
 
-Route::get('/post/create',function(){
-    DB::table('post')->insert([
-        'title' => 'lab4',
-        'body' => 'something'
-    ]);
+Route::get('/blog/create', function() {
+    return view('blog/create');
 });
 
-Route::get('/post',function(){
-    $post = Post::find(1);
-    return $post;
-});
+Route::post('/blog/create',[ BlogController::class, 'store' ])->name('add-post');
+
+Route::get('/blog/index',[ BlogController::class, 'index' ]);
