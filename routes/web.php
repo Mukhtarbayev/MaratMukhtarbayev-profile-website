@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
 use App\Http\Controllers\BlogController;
+use Illuminate\Support\Facades\App;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,21 +21,28 @@ use App\Http\Controllers\BlogController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/main', function() {
-    return \File::get(public_path() . '/main.php');;
-});
-
-Route::get('/about', function() {
-    return \File::get(public_path() . '/about.php');;
-});
-
-Route::get('/contact', function() {
-    return \File::get(public_path() . '/contact.php');;
+Route::group(['prefix'=>'{lang}'], function(){
+    Route::get('/main', function() {
+        return view('main');
+    });
+    
+    Route::get('/about', function() {
+        return view('about');
+    });
+        
+    Route::get('/contact', function() {
+        return view('contact');
+    });
 });
 
 Route::get('/blog/create', function() {
     return view('blog/create');
 });
+// Route::get('/{lang}', function ($lang) {
+//     App::setlocale($lang);
+//     return view('main');
+// });
+
 
 Route::post('/blog/create',[ BlogController::class, 'store' ])->name('add-post');
 

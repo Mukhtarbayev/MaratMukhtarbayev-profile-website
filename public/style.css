@@ -16,7 +16,7 @@ html {
 }
 
 .info {
-    width: 85%;
+    width: 83%;
     height: 100%;
     background-color: transparent;
     margin: auto;
@@ -25,7 +25,7 @@ html {
 }
 
 .quick {
-    width: 15%;
+    width: 17%;
     height: 100%;
     background-color: sandybrown;
     border-top-left-radius: 30%;
@@ -57,9 +57,9 @@ html {
 
 li {
     cursor: pointer;
-    margin: 65% auto;
+    margin: 35% auto;
     border-radius: 30%;
-    margin-right: 10px;
+    margin-right: 0px;
     padding: 10px;
 }
 
